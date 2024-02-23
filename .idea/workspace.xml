@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ccb8fe59-3181-40dc-9cef-0a4543baa119" name="Changes" comment="created project">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ClientPackage/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DriverPackage/Driver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LibraryPackage/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LibraryPackage/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LibraryPackage/Journal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LibraryPackage/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryPackage/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LibraryPackage/Journal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryPackage/Journal.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,10 +24,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2cgYcg2bXR9jYorl2d2F6zRe5Xv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -81,6 +77,17 @@
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="created project" />

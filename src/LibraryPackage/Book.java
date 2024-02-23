@@ -8,20 +8,14 @@ public class Book extends Item {
 
     // default constructor
     public Book() {
+        super("generic book", "generic author," 420, 69);
         this.id = "B" + totalBooks;
-        this.name = "generic book";
-        this.author = "generic author";
-        this.yearOfPub = 420;
-        this.numPages = 69;
     }
 
     // parameterized constructor
     public Book(String name, String author, int yearOfPub, int numPages) {
+        super(name, author, yearOfPub, numPages);
         this.id = "B" + totalBooks;
-        this.name = name;
-        this.author = author;
-        this.yearOfPub = yearOfPub;
-        this.numPages = numPages;
     }
 
 
