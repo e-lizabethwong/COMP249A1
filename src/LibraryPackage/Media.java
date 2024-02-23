@@ -19,17 +19,18 @@ public class Media extends Item {
         this.id = "M" + totalMedia++;
     }
 
+    // copy constructor
+    @SuppressWarnings("CopyConstructorMissesField")
+    public Media(Media otherMedia) {
+        this(otherMedia.name, otherMedia.author, otherMedia.yearOfPub, otherMedia.type);
+    }
+
     // equals
     public boolean equals(Media otherMedia) {
         return this.name.equals(otherMedia.name) && this.author.equals(otherMedia.author) &&
                 this.yearOfPub == otherMedia.yearOfPub && this.type.equals(otherMedia.type);
     }
 
-    // copy constructor
-    public Media (Media otherMedia) {
-        // ID isnt copied because each new copy has a unique ID
-        this(otherMedia.name, otherMedia.author, otherMedia.yearOfPub, otherMedia.type);
-    }
 
     // getter and setter for name, auth, yearofpub are inherited from Item
     public String getType() {

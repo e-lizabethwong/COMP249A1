@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ccb8fe59-3181-40dc-9cef-0a4543baa119" name="Changes" comment="finished constructors, getters, and setters for Item and its children">
+    <list default="true" id="ccb8fe59-3181-40dc-9cef-0a4543baa119" name="Changes" comment="finished all getters &amp; setters &amp; equals for Item and inheritors as well as documentation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClientPackage/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientPackage/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DriverPackage/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DriverPackage/Driver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LibraryPackage/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryPackage/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LibraryPackage/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryPackage/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LibraryPackage/Journal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryPackage/Journal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LibraryPackage/Media.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryPackage/Media.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,6 +39,9 @@
         <option name="url" value="https://github.com/e-lizabethwong/COMP249A1" />
       </UrlAndAccount>
     </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -102,7 +103,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708726340940</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="finished all getters &amp; setters &amp; equals for Item and inheritors as well as documentation">
+      <option name="closed" value="true" />
+      <created>1708727565427</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1708727565427</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -120,6 +129,7 @@
     <MESSAGE value="created project" />
     <MESSAGE value="journal init" />
     <MESSAGE value="finished constructors, getters, and setters for Item and its children" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished constructors, getters, and setters for Item and its children" />
+    <MESSAGE value="finished all getters &amp; setters &amp; equals for Item and inheritors as well as documentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished all getters &amp; setters &amp; equals for Item and inheritors as well as documentation" />
   </component>
 </project>
