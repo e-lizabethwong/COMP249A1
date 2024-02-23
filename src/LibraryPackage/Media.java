@@ -19,6 +19,12 @@ public class Media extends Item {
         this.id = "M" + totalMedia++;
     }
 
+    // equals
+    public boolean equals(Media otherMedia) {
+        return this.name.equals(otherMedia.name) && this.author.equals(otherMedia.author) &&
+                this.yearOfPub == otherMedia.yearOfPub && this.type.equals(otherMedia.type);
+    }
+
     // copy constructor
     public Media (Media otherMedia) {
         // ID isnt copied because each new copy has a unique ID

@@ -31,6 +31,13 @@ public class Item {
         this.id = "I" + 69;
     }
 
+    // equals method
+    public boolean equals(Item otherItem) {
+        return this.name.equals(otherItem.name) && this.author.equals(otherItem.author) && (this.yearOfPub == otherItem.yearOfPub);
+    }
+
+    // toString
+
     // getter and setter for name, author, and yearOfPub so it can be inherited by Book, Journal, and Media
     // getters
     public String getName() {

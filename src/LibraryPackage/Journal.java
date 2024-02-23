@@ -23,6 +23,12 @@ public class Journal extends Item {
         this(otherJournal.name, otherJournal.author, otherJournal.yearOfPub, otherJournal.volumeNum);
     }
 
+    // equals
+    public boolean equals(Journal otherJournal) {
+        return this.name.equals(otherJournal.name) && this.author.equals(otherJournal.author) &&
+                this.yearOfPub == otherJournal.yearOfPub && this.volumeNum == otherJournal.volumeNum;
+    }
+
     // getter and setter for name, auth, yearofpub are inherited from Item
     public int getVolumeNum() {
         return  this.volumeNum;

@@ -24,6 +24,12 @@ public class Book extends Item {
         this(otherBook.name, otherBook.author, otherBook.yearOfPub, otherBook.numPages);
     }
 
+    // equals method
+    public boolean equals(Book otherBook) {
+        return this.name.equals(otherBook.name) && this.author.equals(otherBook.author) &&
+                (this.yearOfPub == otherBook.yearOfPub) && (this.numPages == otherBook.numPages);
+    }
+
     // getter and setter for name, auth, yearofpub are inherited from Item
     public int getNumPages() {
         return numPages;
