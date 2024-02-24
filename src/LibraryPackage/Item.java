@@ -37,9 +37,19 @@ public class Item {
     }
 
     // toString
+    @Override
+    public String toString(){
+        return "Item ID: " + this.id +
+                "\nItem Name: " + this.name +
+                "\nItem Author: " + this.author +
+                "\nYear of Publication: " + this.yearOfPub;
+    }
 
     // getter and setter for name, author, and yearOfPub so it can be inherited by Book, Journal, and Media
     // getters
+    public String getID() {
+        return this.id;
+    }
     public String getName() {
         return this.name;
     }

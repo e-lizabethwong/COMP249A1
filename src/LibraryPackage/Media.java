@@ -30,6 +30,16 @@ public class Media extends Item {
                 this.yearOfPub == otherMedia.yearOfPub && this.type.equals(otherMedia.type);
     }
 
+    // toString
+    @Override
+    public String toString(){
+        return "Media ID: " + this.id +
+                "\nMedia Name: " + this.name +
+                "\nMedia Author: " + this.author +
+                "\nJournal of Publication: " + this.yearOfPub +
+                "\nMedia Type: " + this.type;
+    }
+
 
     // getter and setter for name, auth, yearofpub are inherited from Item
     public String getType() {

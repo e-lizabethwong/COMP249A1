@@ -3,7 +3,6 @@ package src.LibraryPackage;
 public class Book extends Item {
     // used for generating unique book IDs
     public static int totalBooks = 1;
-
     public int numPages = 0;
 
     // default constructor
@@ -28,6 +27,16 @@ public class Book extends Item {
     public boolean equals(Book otherBook) {
         return this.name.equals(otherBook.name) && this.author.equals(otherBook.author) &&
                 (this.yearOfPub == otherBook.yearOfPub) && (this.numPages == otherBook.numPages);
+    }
+
+    // toString
+    @Override
+    public String toString(){
+        return "Book ID: " + this.id +
+                "\nBook Name: " + this.name +
+                "\nBook Author: " + this.author +
+                "\nYear of Publication: " + this.yearOfPub +
+                "\nNumber of Pages: " + this.numPages;
     }
 
     // getter and setter for name, auth, yearofpub are inherited from Item

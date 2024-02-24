@@ -29,6 +29,16 @@ public class Journal extends Item {
                 this.yearOfPub == otherJournal.yearOfPub && this.volumeNum == otherJournal.volumeNum;
     }
 
+    // toString
+    @Override
+    public String toString(){
+        return "Journal ID: " + this.id +
+                "\nJournal Name: " + this.name +
+                "\nJournal Author: " + this.author +
+                "\nYear of Publication: " + this.yearOfPub +
+                "\nVolume Number: " + this.volumeNum;
+    }
+
     // getter and setter for name, auth, yearofpub are inherited from Item
     public int getVolumeNum() {
         return  this.volumeNum;
