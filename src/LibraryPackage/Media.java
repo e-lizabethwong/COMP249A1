@@ -20,7 +20,6 @@ public class Media extends Item {
     }
 
     // copy constructor
-    @SuppressWarnings("CopyConstructorMissesField")
     public Media(Media otherMedia) {
         this(otherMedia.name, otherMedia.author, otherMedia.yearOfPub, otherMedia.type);
     }

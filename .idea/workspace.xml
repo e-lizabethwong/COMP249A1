@@ -7,8 +7,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ccb8fe59-3181-40dc-9cef-0a4543baa119" name="Changes" comment="finished all getters &amp; setters &amp; equals for Item and inheritors as well as documentation">
+    <list default="true" id="ccb8fe59-3181-40dc-9cef-0a4543baa119" name="Changes" comment="last push before trying saving rented books etc">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClientPackage/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientPackage/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DriverPackage/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DriverPackage/Driver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LibraryPackage/Media.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryPackage/Media.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -111,7 +113,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708727565427</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="last push before trying saving rented books etc">
+      <option name="closed" value="true" />
+      <created>1708731785249</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1708731785249</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -130,6 +140,7 @@
     <MESSAGE value="journal init" />
     <MESSAGE value="finished constructors, getters, and setters for Item and its children" />
     <MESSAGE value="finished all getters &amp; setters &amp; equals for Item and inheritors as well as documentation" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished all getters &amp; setters &amp; equals for Item and inheritors as well as documentation" />
+    <MESSAGE value="last push before trying saving rented books etc" />
+    <option name="LAST_COMMIT_MESSAGE" value="last push before trying saving rented books etc" />
   </component>
 </project>
