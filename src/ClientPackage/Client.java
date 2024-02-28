@@ -4,10 +4,10 @@ import src.LibraryPackage.*;
 public class Client {
 
     // variables for the client's information
-    public String clientID = "";
-    public String name = "";
-    public long phoneNum = 0;
-    public String email = "";
+    private String clientID;
+    private String name;
+    private long phoneNum;
+    private String email;
 
     // stores number of clients for ID
     public static int totalClients = 0;
@@ -19,7 +19,7 @@ public class Client {
 
     // default constructor
     public Client() {
-        this("bob ross", 514420696, "blabla@bla.ca");
+        this("", 0, "");
     }
 
     // parameterized constructor
