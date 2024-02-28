@@ -17,7 +17,7 @@ public class Driver {
 
     public static void main(String[] args) {
         // TODO: delete and write a real main that isnt testing and full on meme-ing
-        Client yoMAMA = new Client("6942069", "yo mama", 1234423213, "feet4free@toes.com");
+        Client yoMAMA = new Client("yo mama", 1234423213, "feet4free@toes.com");
         System.out.println(yoMAMA.toString());
 
         Item notAnymore = new Item();

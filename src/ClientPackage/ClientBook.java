@@ -1,6 +1,8 @@
 package src.ClientPackage;
 import src.LibraryPackage.*;
 
+// TODO: equals (and do i need accessor and mutator even???)
+
 public class ClientBook {
 
     // array to store Clients
@@ -43,5 +45,15 @@ public class ClientBook {
             }
         }
         this.clients = newClientBook;
+    }
+
+    // toString
+    @Override
+    public String toString() {
+        String strClients = "";
+        for (int i=0; i<this.clients.length; i++) {
+            strClients += this.clients.toString() + "\n";
+        }
+        return strClients;
     }
 }

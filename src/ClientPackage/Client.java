@@ -9,6 +9,9 @@ public class Client {
     public long phoneNum = 0;
     public String email = "";
 
+    // stores number of clients for ID
+    public static int totalClients = 0;
+
     // array to store client's leased items
     public Item[] leasedItems = new Item[0];
     // array to store items leased by *all* clients
@@ -16,12 +19,12 @@ public class Client {
 
     // default constructor
     public Client() {
-        this("dawgski69420", "bob ross", 514420696, "blabla@bla.ca");
+        this("bob ross", 514420696, "blabla@bla.ca");
     }
 
     // parameterized constructor
-    public Client(String clientID, String name, long phoneNum, String email) {
-        this.clientID = clientID;
+    public Client(String name, long phoneNum, String email) {
+        this.clientID = "C" + totalClients;
         this.name = name;
         this.phoneNum = phoneNum;
         this.email = email;
@@ -29,7 +32,7 @@ public class Client {
 
     // copy constructor
     public Client (Client otherClient) {
-        this(otherClient.clientID, otherClient.name, otherClient.phoneNum, otherClient.email);
+        this(otherClient.name, otherClient.phoneNum, otherClient.email);
     }
 
     // lease an item to the client
@@ -59,6 +62,25 @@ public class Client {
                 "Phone Number: " + phoneNum + '\n' +
                 "email: " + email + '\n' +
                 "----------------------------------------";
+    }
+
+    // equals
+    @Override
+    public boolean equals(Object otherObject)
+    {
+        //verify if passed object is null
+        if (otherObject == null)
+        {
+            return false;
+        }
+        //verify if passed object is of a different type than the calling object
+        if (this.getClass() != otherObject.getClass())
+        {
+            return false;
+        }
+        //compares equality of each attribute except for the ID
+        Client otherClient = (Client) otherObject;
+        return (this.name.equals(otherClient.name) && this.phoneNum == otherClient.phoneNum && this.email.equals(otherClient.email));
     }
 
     // getters and setters
