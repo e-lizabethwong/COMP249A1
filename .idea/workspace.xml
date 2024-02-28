@@ -7,11 +7,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ccb8fe59-3181-40dc-9cef-0a4543baa119" name="Changes" comment="ClientBook toString">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="ccb8fe59-3181-40dc-9cef-0a4543baa119" name="Changes" comment="clientID change and clientBook toString">
       <change beforePath="$PROJECT_DIR$/src/ClientPackage/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientPackage/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClientPackage/ClientBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientPackage/ClientBook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DriverPackage/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DriverPackage/Driver.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +171,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709150251515</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="clientID change and clientBook toString">
+      <option name="closed" value="true" />
+      <created>1709153546143</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1709153546143</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -199,6 +204,7 @@
     <MESSAGE value="comment changes + lease function for client class" />
     <MESSAGE value="remove and add client and created ClientBook class" />
     <MESSAGE value="ClientBook toString" />
-    <option name="LAST_COMMIT_MESSAGE" value="ClientBook toString" />
+    <MESSAGE value="clientID change and clientBook toString" />
+    <option name="LAST_COMMIT_MESSAGE" value="clientID change and clientBook toString" />
   </component>
 </project>

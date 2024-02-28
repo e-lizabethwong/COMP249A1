@@ -24,7 +24,7 @@ public class Client {
 
     // parameterized constructor
     public Client(String name, long phoneNum, String email) {
-        this.clientID = "C" + totalClients;
+        this.clientID = "C" + ++totalClients;
         this.name = name;
         this.phoneNum = phoneNum;
         this.email = email;
