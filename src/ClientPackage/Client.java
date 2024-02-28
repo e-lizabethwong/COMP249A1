@@ -3,26 +3,21 @@ import src.LibraryPackage.*;
 
 public class Client {
 
-    // variables for the client's information
+    //private attributes of the client's information
     private String clientID;
     private String name;
     private long phoneNum;
     private String email;
 
     // stores number of clients for ID
-    public static int totalClients = 0;
+    private static int totalClients = 0;
 
-    // array to store client's leased items
-    public Item[] leasedItems = new Item[0];
-    // array to store items leased by *all* clients
-    public static Item[] allLeasedItems = new Item[0];
-
-    // default constructor
+    // default constructor initializes attributes
     public Client() {
         this("", 0, "");
     }
 
-    // parameterized constructor
+    // parameterized constructor initializes attraibutes with given values, except for the ID which is automatically set 
     public Client(String name, long phoneNum, String email) {
         this.clientID = "C" + ++totalClients;
         this.name = name;
@@ -33,54 +28,6 @@ public class Client {
     // copy constructor
     public Client (Client otherClient) {
         this(otherClient.name, otherClient.phoneNum, otherClient.email);
-    }
-
-    // lease an item to the client
-    // deepcopies
-    public void lease(Item item) {
-        int currentSize = this.leasedItems.length;
-        Item[] newLeasedItems = new Item[currentSize+1];
-        for (int i=0; i<currentSize; i++) {
-            newLeasedItems[i] = this.leasedItems[i];
-        }
-        newLeasedItems[currentSize] = item;
-        this.leasedItems = newLeasedItems;
-    }
-
-    // static method that returns all leased items
-    public static String allLeasedItems() {
-        return "WIP";
-    }
-
-    //TODO: update this sheet to include leased items
-    // toString
-    @Override
-    public String toString() {
-        return "Client Profile --------------------------\n" +
-                "Client ID: " + clientID + '\n' +
-                "Name: " + name + '\n' +
-                "Phone Number: " + phoneNum + '\n' +
-                "email: " + email + '\n' +
-                "----------------------------------------";
-    }
-
-    // equals
-    @Override
-    public boolean equals(Object otherObject)
-    {
-        //verify if passed object is null
-        if (otherObject == null)
-        {
-            return false;
-        }
-        //verify if passed object is of a different type than the calling object
-        if (this.getClass() != otherObject.getClass())
-        {
-            return false;
-        }
-        //compares equality of each attribute except for the ID
-        Client otherClient = (Client) otherObject;
-        return (this.name.equals(otherClient.name) && this.phoneNum == otherClient.phoneNum && this.email.equals(otherClient.email));
     }
 
     // getters and setters
@@ -115,4 +62,60 @@ public class Client {
     public void setClientID(String clientID) {
         this.clientID = clientID;
     }
+
+    // toString
+    @Override
+    public String toString() {
+        return "Client Profile --------------------------\n" +
+                "Client ID: " + clientID + '\n' +
+                "Name: " + name + '\n' +
+                "Phone Number: " + phoneNum + '\n' +
+                "email: " + email + '\n' +
+                "----------------------------------------";
+    }
+
+    // equals
+    @Override
+    public boolean equals(Object otherObject)
+    {
+        //verify if passed object is null
+        if (otherObject == null)
+        {
+            return false;
+        }
+        //verify if passed object is of a different type than the calling object
+        if (this.getClass() != otherObject.getClass())
+        {
+            return false;
+        }
+        //compares equality of each attribute except for the ID
+        Client otherClient = (Client) otherObject;
+        return (this.name.equals(otherClient.name) && this.phoneNum == otherClient.phoneNum && this.email.equals(otherClient.email));
+    }
+
+    // array to store client's leased items
+    public Item[] leasedItems = new Item[0];
+    // array to store items leased by *all* clients
+    public static Item[] allLeasedItems = new Item[0];
+
+
+    // lease an item to the client
+    // deepcopies
+    public void lease(Item item) {
+        int currentSize = this.leasedItems.length;
+        Item[] newLeasedItems = new Item[currentSize+1];
+        for (int i=0; i<currentSize; i++) {
+            newLeasedItems[i] = this.leasedItems[i];
+        }
+        newLeasedItems[currentSize] = item;
+        this.leasedItems = newLeasedItems;
+    }
+
+    // static method that returns all leased items
+    public static String allLeasedItems() {
+        return "WIP";
+    }
+
+    //TODO: update this sheet to include leased items
+    
 }

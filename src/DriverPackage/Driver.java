@@ -5,7 +5,8 @@
 //
 //----------------------------------------------------------------
 //
-// this program does sht for a not programming library.
+// This program  manages all the items in a library like leases as well as returns to and from clients. The library has books, journals, and media.
+// All items have an ID, a name, author(s), and year of publication. A client has an ID, name, phone number, and email address.
 // TODO: edit .equals() to verify for null object and same object type
 
 package src.DriverPackage;

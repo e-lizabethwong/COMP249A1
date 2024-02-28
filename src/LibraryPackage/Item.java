@@ -2,17 +2,19 @@ package src.LibraryPackage;
 
 // super class for all library items
 public class Item {
-    public String id = "";
-    public String name = "";
-    public String author = "";
-    public int yearOfPub = 0;
+    private String id;
+    private String name;
+    private String author;
+    private int yearOfPub;
+
+    private static int totalItems = 0;
 
     // default constructor
     public Item() {
-        this.id = "I" + 0;
-        this.name = "generic item";
-        this.author = "generic author";
-        this.yearOfPub = 69420;
+        this.id = "I" + ++totalItems;
+        this.name = "";
+        this.author = "";
+        this.yearOfPub = 0;
     }
 
     // parameterized constructor
@@ -20,7 +22,7 @@ public class Item {
         this.name = name;
         this.author = author;
         this.yearOfPub = yearOfPub;
-        this.id = "I" + 420;
+        this.id = "I" + ++totalItems;
     }
 
     // copy constructor
@@ -28,11 +30,25 @@ public class Item {
     public Item(Item otherItem) {
         // doesnt copy ID because it's individ for each item +
         this(otherItem.name, otherItem.author, otherItem.yearOfPub);
-        this.id = "I" + 69;
+        this.id = "I" + ++totalItems;
     }
 
     // equals method
-    public boolean equals(Item otherItem) {
+    @Override
+    public boolean equals(Object otherObject) {
+         //verify if passed object is null
+         if (otherObject == null)
+         {
+             return false;
+         }
+         //verify if passed object is of a different type than the calling object
+         if (this.getClass() != otherObject.getClass())
+         {
+             return false;
+         }
+         //compares equality of each attribute except for the ID
+         Item otherItem = (Item) otherObject;
+        
         return this.name.equals(otherItem.name) && this.author.equals(otherItem.author) && (this.yearOfPub == otherItem.yearOfPub);
     }
 
@@ -68,5 +84,10 @@ public class Item {
     }
     public void setYearOfPub(int yearOfPub) {
         this.yearOfPub = yearOfPub;
+    }
+
+    public void setID(String id)
+    {
+        this.id = id;
     }
 }

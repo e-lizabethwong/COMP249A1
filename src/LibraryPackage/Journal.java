@@ -2,40 +2,52 @@ package src.LibraryPackage;
 
 public class Journal extends Item {
 
-    public int volumeNum = 0;
+    private int volumeNum;
     // used for generating unique journal IDs
-    public static int totalJournals = 1;
+    private static int totalJournals = 1;
 
     // default constructor
     public Journal() {
-        this("generic journal", "generic author", 69, 420);
+        this("", "", 0, 0);
     }
 
     // paramterized constructor
     public Journal(String name, String author, int yearOfPub, int volumeNum) {
         super(name, author, yearOfPub);
         this.volumeNum = volumeNum;
-        this.id = "J" + totalJournals++;
+        super.setID("J" + totalJournals++);
     }
 
     // copy constructor
     public Journal(Journal otherJournal) {
-        this(otherJournal.name, otherJournal.author, otherJournal.yearOfPub, otherJournal.volumeNum);
+        this(otherJournal.getName(), otherJournal.getAuthor(), otherJournal.getYearOfPub(), otherJournal.getVolumeNum());
     }
 
     // equals
-    public boolean equals(Journal otherJournal) {
-        return this.name.equals(otherJournal.name) && this.author.equals(otherJournal.author) &&
-                this.yearOfPub == otherJournal.yearOfPub && this.volumeNum == otherJournal.volumeNum;
+    public boolean equals(Object otherObject) {
+         //verify if passed object is null
+         if (otherObject == null)
+         {
+             return false;
+         }
+         //verify if passed object is of a different type than the calling object
+         if (this.getClass() != otherObject.getClass())
+         {
+             return false;
+         }
+         //compares equality of each attribute except for the ID
+         Journal otherJournal = (Journal) otherObject;
+        return this.getName().equals(otherJournal.getName()) && this.getAuthor().equals(otherJournal.getAuthor()) &&
+                this.getYearOfPub() == otherJournal.getYearOfPub() && this.volumeNum == otherJournal.volumeNum;
     }
 
     // toString
     @Override
     public String toString(){
-        return "Journal ID: " + this.id +
-                "\nJournal Name: " + this.name +
-                "\nJournal Author: " + this.author +
-                "\nYear of Publication: " + this.yearOfPub +
+        return "Journal ID: " + this.getID() +
+                "\nJournal Name: " + this.getName() +
+                "\nJournal Author: " + this.getAuthor() +
+                "\nYear of Publication: " + this.getYearOfPub() +
                 "\nVolume Number: " + this.volumeNum;
     }
 

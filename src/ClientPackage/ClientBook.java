@@ -6,7 +6,7 @@ import src.LibraryPackage.*;
 public class ClientBook {
 
     // array to store Clients
-    Client[] clients = null;
+    Client[] clients;
 
     // default constructor
     public ClientBook() {
