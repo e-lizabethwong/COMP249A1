@@ -1,18 +1,25 @@
 package src.ClientPackage;
+import src.LibraryPackage.*;
 
 public class Client {
 
+    // variables for the client's information
     public String clientID = "";
     public String name = "";
     public long phoneNum = 0;
     public String email = "";
+
+    // array to store client's leased items
+    public Item[] leasedItems = new Item[0];
+    // array to store items leased by *all* clients
+    public static Item[] allLeasedItems = new Item[0];
 
     // default constructor
     public Client() {
         this("dawgski69420", "bob ross", 514420696, "blabla@bla.ca");
     }
 
-    // paramaterized constructor
+    // parameterized constructor
     public Client(String clientID, String name, long phoneNum, String email) {
         this.clientID = clientID;
         this.name = name;
@@ -25,11 +32,24 @@ public class Client {
         this(otherClient.clientID, otherClient.name, otherClient.phoneNum, otherClient.email);
     }
 
+    // lease an item to the client
+    // deepcopies
+    public void lease(Item item) {
+        int currentSize = this.leasedItems.length;
+        Item[] newLeasedItems = new Item[currentSize+1];
+        for (int i=0; i<currentSize; i++) {
+            newLeasedItems[i] = this.leasedItems[i];
+        }
+        newLeasedItems[currentSize] = item;
+        this.leasedItems = newLeasedItems;
+    }
+
     // static method that returns all leased items
     public static String allLeasedItems() {
         return "WIP";
     }
 
+    //TODO: update this sheet to include leased items
     // toString
     @Override
     public String toString() {

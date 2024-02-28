@@ -5,7 +5,7 @@
 //
 //----------------------------------------------------------------
 //
-// this program does sht for a library.
+// this program does sht for a not programming library.
 // TODO: edit .equals() to verify for null object and same object type
 
 package src.DriverPackage;
@@ -25,5 +25,10 @@ public class Driver {
 
         Book innIt = new Book("smort", "smort guy", 2023, 88);
         System.out.println(innIt.toString() + innIt.getAuthor());
+
+        // list in client that carries that client's rented items
+        // static list in client that carries all rented items
+
+        // list in item to keep track of all items created?
     }
 }

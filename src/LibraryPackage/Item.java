@@ -15,7 +15,7 @@ public class Item {
         this.yearOfPub = 69420;
     }
 
-    // parameter constructor
+    // parameterized constructor
     public Item(String name, String author, int yearOfPub) {
         this.name = name;
         this.author = author;
