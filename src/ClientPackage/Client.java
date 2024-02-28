@@ -10,7 +10,7 @@ public class Client {
     private String email;
 
     // stores number of clients for ID
-    public static int totalClients = 0;
+    private static int totalClients = 0;
 
     // array to store client's leased items
     public Item[] leasedItems = new Item[0];
