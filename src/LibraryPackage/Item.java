@@ -26,7 +26,6 @@ public class Item {
     }
 
     // copy constructor
-    // bro idek why we have to make a copy constructor here we're never gonna use it
     public Item(Item otherItem) {
         // doesnt copy ID because it's individ for each item +
         this(otherItem.name, otherItem.author, otherItem.yearOfPub);
