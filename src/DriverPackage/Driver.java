@@ -27,7 +27,7 @@ public class Driver {
 
         if (next == 1)
         {
-            
+
         }
 
 
@@ -80,7 +80,7 @@ public class Driver {
             {
                 deepCopy[i] = new Journal((Journal)arr[i]);
             }
-            else if arr[i] instanceof Media)
+            else if (arr[i] instanceof Media)
             {
                 deepCopy[i] = new Media((Media)arr[i]);
             }
