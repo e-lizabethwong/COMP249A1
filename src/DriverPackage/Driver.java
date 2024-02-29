@@ -93,6 +93,10 @@ public class Driver {
                 {
 
                 }
+                if (menu == 3)
+                {
+                    System.out.println("Which information would you like to change?");
+                }
             
 
             
