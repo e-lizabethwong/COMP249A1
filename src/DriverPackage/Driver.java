@@ -27,7 +27,46 @@ public class Driver {
 
         if (next == 1)
         {
+            do{
+                System.out.println("---------------------------------------");
+                System.out.println("Select a menu number to do an action:");
+                System.out.println("1- add an item");
+                System.out.println("2- delete an item");
+                System.out.println("3- change information of an item");
+                System.out.println("4- list all items in a specific category(book, hournal, media)");
+                System.out.println("5- print all items from all categories");
+                System.out.println();
+                System.out.println("6- add a client");
+                System.out.println("7- edit a client");
+                System.out.println("8- delete a client");
+                System.out.println("9- show all items leased by a client");
+                System.out.println("9- show all leased items by all clients");
+                System.out.println("10- display the biggest book");
+                System.out.println("11- make a copy of the books array");
 
+                int menu = in.nextInt();
+
+                if (menu == 1)
+                {
+                    System.out.println("What kind of item is it? B, J, M");
+                    if (in.next().equalsIgnoreCase("b"))
+                    {
+                        System.out.println("Enter name:");
+                        String name = in.nextLine();
+                        System.out.println("Enter author:");
+                        String author = in.nextLine();
+                        System.out.println("Enter year of publication:");
+                        int yr = in.nextInt();
+                        System.out.println("Enter number of pages:");
+                        int numPages = in.nextInt();
+
+                        Book b = new Book(name, author, yr, numPages);
+                    }
+
+                    
+                }
+
+            }
         }
 
 
