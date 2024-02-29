@@ -60,14 +60,44 @@ public class Driver {
                         System.out.println("Enter number of pages:");
                         int numPages = in.nextInt();
 
-                        Book b = new Book(name, author, yr, numPages);
+                        Item b = new Book(name, author, yr, numPages);
                     }
+                    if (in.next().equalsIgnoreCase("j"))
+                    {
+                        System.out.println("Enter name:");
+                        String name = in.nextLine();
+                        System.out.println("Enter author:");
+                        String author = in.nextLine();
+                        System.out.println("Enter year of publication:");
+                        int yr = in.nextInt();
+                        System.out.println("Enter volume number:");
+                        int numVol = in.nextInt();
 
-                    
+                        Item j = new Journal(name, author, yr, numVol);
+                    }
+                    if (in.next().equalsIgnoreCase("m"))
+                    {
+                        System.out.println("Enter name:");
+                        String name = in.nextLine();
+                        System.out.println("Enter author:");
+                        String author = in.nextLine();
+                        System.out.println("Enter year of publication:");
+                        int yr = in.nextInt();
+                        System.out.println("Enter type:");
+                        String type = in.nextLine();
+
+                        Item m = new Media(name, author, yr, type);
+                    }
                 }
+                if (menu ==2)
+                {
 
-            }
-        }
+                }
+            
+
+            
+        }while(next<1 || next >11);
+    }
 
 
         Client yoMAMA = new Client("yo mama", 1234423213, "feet4free@toes.com");
