@@ -65,6 +65,16 @@ public class Client {
         this.clientID = clientID;
     }
 
+    public static int getClientCount()
+    {
+        return clientCount;
+    }
+
+    public static void setClientCount(int count)
+    {
+        clientCount = count;
+    }
+
     // toString
     @Override
     public String toString() {
@@ -115,5 +125,6 @@ public class Client {
      public static String allLeasedItems() {
          return "WIP";
      }
-    
+
+         
 }

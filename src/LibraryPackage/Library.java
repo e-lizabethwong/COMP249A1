@@ -67,13 +67,13 @@ public class Library
 
 
     public void deleteClient(String id) {
-        for (int i = 0; i < Client.clientCount; i++) {
+        for (int i = 0; i < Client.getClientCount(); i++) {
             if (clients[i].getClientID().equals(id)) {
                 clients[i] = null;
-                for (int j = i; j < Client.clientCount - 1; j++) {
+                for (int j = i; j < Client.getClientCount() - 1; j++) {
                     clients[j] = clients[j + 1];
                 }
-                Client.clientCount--;
+                Client.setClientCount((Client.getClientCount())-1);
                 System.out.println("Client deleted successfully!");
                 
             }
