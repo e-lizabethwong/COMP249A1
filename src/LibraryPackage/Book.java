@@ -1,7 +1,5 @@
 package src.LibraryPackage;
 
-import src.ClientPackage.Client;
-
 public class Book extends Item {
     // used for generating unique book IDs
     private static int totalBooks = 1;
