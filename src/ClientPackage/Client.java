@@ -8,9 +8,11 @@ public class Client {
     private String name;
     private long phoneNum;
     private String email;
-    private Item leasedItem;
 
-    public static int clientCount = 0;
+    private static int clientCount = 0;
+
+    // array to store client's leased items
+    private Item[] leasedItems = new Item[0];
 
     // default constructor initializes attributes
     public Client() {
@@ -93,29 +95,6 @@ public class Client {
         return (this.name.equals(otherClient.name) && this.phoneNum == otherClient.phoneNum && this.email.equals(otherClient.email));
     }
 
-    public void leaseItem(Item item) {
-        this.leasedItem = item;
-    }
-
-    public void returnItem() {
-        this.leasedItem = null;
-    }
-
-    public Item getLeasedItem() {
-        return this.leasedItem;
-    }
-
-    public void showLeasedItem() {
-        if (this.leasedItem != null) {
-            System.out.println("Item leased by " + name + ": " + leasedItem);
-        } else {
-            System.out.println("No item leased by " + name);
-        }
-    }
-
-
-     // array to store client's leased items
-     public Item[] leasedItems = new Item[0];
      // array to store items leased by *all* clients
      public static Item[] allLeasedItems = new Item[0];
  
