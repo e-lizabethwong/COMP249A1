@@ -120,9 +120,28 @@ public class Client {
          newLeasedItems[currentSize] = item;
          this.leasedItems = newLeasedItems;
      }
+
+     // allows client to return an item
+    // deepcopy of original list minus returned item
+    // need to skip at i hmmm
+    public void returns(Item item) {
+        int currentSize = this.leasedItems.length;
+        Item[] newLeasedItems = new Item[currentSize=1];
+        for (int i=0; i< currentSize; i++) {
+            if (!this.leasedItems[i].equals(item)) {
+                newLeasedItems[i] = this.leasedItems[i];
+            } else {
+                // "skips" over the removed item without having a null entry in the new array
+                currentSize -= 1;
+                i -= 1;
+            }
+        }
+        this.leasedItems = newLeasedItems;
+    }
  
-     // static method that returns all leased items
+     // static method that returns *all* leased items
      public static String allLeasedItems() {
+
          return "WIP";
      }
 
