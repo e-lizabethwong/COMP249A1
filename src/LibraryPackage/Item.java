@@ -7,11 +7,8 @@ public class Item {
     private String author;
     private int yearOfPub;
 
-    private static int totalItems = 0;
-
     // default constructor
     public Item() {
-        this.id = "I" + ++totalItems;
         this.name = "";
         this.author = "";
         this.yearOfPub = 0;
@@ -22,14 +19,13 @@ public class Item {
         this.name = name;
         this.author = author;
         this.yearOfPub = yearOfPub;
-        this.id = "I" + ++totalItems;
     }
 
     // copy constructor
     public Item(Item otherItem) {
         // doesnt copy ID because it's individ for each item +
         this(otherItem.name, otherItem.author, otherItem.yearOfPub);
-        this.id = "I" + ++totalItems;
+
     }
 
     // equals method
