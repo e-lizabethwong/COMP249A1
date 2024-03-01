@@ -18,7 +18,7 @@ import src.LibraryPackage.*;
 public class Driver {
 
     public static void main(String[] args) {
-        // TODO: delete and write a real main that isnt testing and full on meme-ing
+        
         Scanner in = new Scanner(System.in);
         System.out.println("Welcome to Elizabeth and Elsa's library!");
         System.out.println("Enter 1 if you would like to go to the menu or 2 if you would like to run a pre-defined scenario");
@@ -46,61 +46,75 @@ public class Driver {
 
                 int menu = in.nextInt();
 
-                if (menu == 1)
-                {
-                    System.out.println("What kind of item is it? B, J, M");
-                    if (in.next().equalsIgnoreCase("b"))
-                    {
-                        System.out.println("Enter name:");
+                Library library = new Library();
+                
+                switch (menu) {
+                    case 1:
+                    //first define item attributes 
+                        System.out.print("Enter item name: ");
                         String name = in.nextLine();
-                        System.out.println("Enter author:");
+                        System.out.print("Enter item author: ");
                         String author = in.nextLine();
-                        System.out.println("Enter year of publication:");
-                        int yr = in.nextInt();
-                        System.out.println("Enter number of pages:");
-                        int numPages = in.nextInt();
-
-                        Item b = new Book(name, author, yr, numPages);
-                    }
-                    if (in.next().equalsIgnoreCase("j"))
-                    {
-                        System.out.println("Enter name:");
-                        String name = in.nextLine();
-                        System.out.println("Enter author:");
-                        String author = in.nextLine();
-                        System.out.println("Enter year of publication:");
-                        int yr = in.nextInt();
-                        System.out.println("Enter volume number:");
-                        int numVol = in.nextInt();
-
-                        Item j = new Journal(name, author, yr, numVol);
-                    }
-                    if (in.next().equalsIgnoreCase("m"))
-                    {
-                        System.out.println("Enter name:");
-                        String name = in.nextLine();
-                        System.out.println("Enter author:");
-                        String author = in.nextLine();
-                        System.out.println("Enter year of publication:");
-                        int yr = in.nextInt();
-                        System.out.println("Enter type:");
-                        String type = in.nextLine();
-
-                        Item m = new Media(name, author, yr, type);
+                        System.out.print("Enter item year: ");
+                        int year = in.nextInt();
+        
+                        System.out.print("Enter item type (Book/Journal/Media): ");
+                        String category = in.nextLine();
+        
+                        if (category.equalsIgnoreCase("Book")) {
+                            System.out.print("Enter number of pages: ");
+                            int numPages = in.nextInt();
+                            Item book1 = new  Book(name, author, year, numPages);
+                            library.addItem(book1);
+                        } else if (category.equalsIgnoreCase("Journal")) {
+                            System.out.print("Enter volume number: ");
+                            int volumeNumber = in.nextInt();
+                            Item jounral1 = new Journal(name, author, year, volumeNumber);
+                            library.addItem(jounral1);
+                        } else if (category.equalsIgnoreCase("Media")) {
+                            System.out.print("Enter media type: ");
+                            String mediaType = in.nextLine();
+                            Item media1 = new Media(name, author, year, mediaType);
+                            library.addItem(media1);
+                        } else {
+                            System.out.println("Invalid item type!");
+                            }
+                        break;
+                    case 2:
+                            System.out.print("Enter ID of item to delete: ");
+                            String id = in.nextLine();
+                            library.deleteItem(id);
+                            break;
+                        case 3:
+                            System.out.print("Enter ID of item to change: ");
+                            id = in.nextLine();
+                            System.out.print("Enter new name: ");
+                            String newName = in.nextLine();
+                            System.out.print("Enter new author: ");
+                            String newAuthor = in.nextLine();
+                            System.out.print("Enter new year: ");
+                            int newYear = in.nextInt();
+                            library.changeItemInfo(id, newName, newAuthor, newYear);
+                            break;
+                        case 4:
+                            System.out.print("Enter category to list (Book/Journal/Media): ");
+                            category = in.nextLine();
+                            library.listItemsByCategory(category);
+                            break;
+                        case 5:
+                            library.printAllItems();
+                            break;
+                        case 6:
+                           
+                        default:
+                            System.out.println("Invalid choice!");
                     }
                 }
-                if (menu ==2)
-                {
-
-                }
-                if (menu == 3)
-                {
-                    System.out.println("Which information would you like to change?");
-                }
+                   
             
 
             
-        }while(next<1 || next >11);
+        }while(next>=1 || next <=11);
     }
 
 
