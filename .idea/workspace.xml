@@ -7,8 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ccb8fe59-3181-40dc-9cef-0a4543baa119" name="Changes" comment="clientID change and clientBook toString">
-      <change beforePath="$PROJECT_DIR$/src/ClientPackage/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientPackage/Client.java" afterDir="false" />
+    <list default="true" id="ccb8fe59-3181-40dc-9cef-0a4543baa119" name="Changes" comment="fixed clientID generation">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DriverPackage/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DriverPackage/Driver.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +24,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -179,7 +185,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709153546143</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="fixed clientID generation">
+      <option name="closed" value="true" />
+      <created>1709153786627</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1709153786627</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -187,7 +201,15 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ID_WIDTH">
+                <map>
+                  <entry key="Table.Default.Author.ColumnIdWidth" value="234" />
+                  <entry key="Table.Default.Date.ColumnIdWidth" value="47" />
+                  <entry key="Table.Space.CommitStatus.ColumnIdWidth" value="22" />
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -205,6 +227,7 @@
     <MESSAGE value="remove and add client and created ClientBook class" />
     <MESSAGE value="ClientBook toString" />
     <MESSAGE value="clientID change and clientBook toString" />
-    <option name="LAST_COMMIT_MESSAGE" value="clientID change and clientBook toString" />
+    <MESSAGE value="fixed clientID generation" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed clientID generation" />
   </component>
 </project>
