@@ -8,9 +8,9 @@ public class Client {
     private String name;
     private long phoneNum;
     private String email;
+    private Item leasedItem;
 
-    // stores number of clients for ID
-    private static int totalClients = 0;
+    public static int clientCount = 0;
 
     // default constructor initializes attributes
     public Client() {
@@ -19,7 +19,7 @@ public class Client {
 
     // parameterized constructor initializes attraibutes with given values, except for the ID which is automatically set 
     public Client(String name, long phoneNum, String email) {
-        this.clientID = "C" + ++totalClients;
+        clientID = "C" + ++clientCount;
         this.name = name;
         this.phoneNum = phoneNum;
         this.email = email;
@@ -93,29 +93,48 @@ public class Client {
         return (this.name.equals(otherClient.name) && this.phoneNum == otherClient.phoneNum && this.email.equals(otherClient.email));
     }
 
-    // array to store client's leased items
-    public Item[] leasedItems = new Item[0];
-    // array to store items leased by *all* clients
-    public static Item[] allLeasedItems = new Item[0];
+    public void leaseItem(Item item) {
+        this.leasedItem = item;
+    }
 
+    public void returnItem() {
+        this.leasedItem = null;
+    }
 
-    // lease an item to the client
-    // deepcopies
-    public void lease(Item item) {
-        int currentSize = this.leasedItems.length;
-        Item[] newLeasedItems = new Item[currentSize+1];
-        for (int i=0; i<currentSize; i++) {
-            newLeasedItems[i] = this.leasedItems[i];
+    public Item getLeasedItem() {
+        return this.leasedItem;
+    }
+
+    public void showLeasedItem() {
+        if (this.leasedItem != null) {
+            System.out.println("Item leased by " + name + ": " + leasedItem);
+        } else {
+            System.out.println("No item leased by " + name);
         }
-        newLeasedItems[currentSize] = item;
-        this.leasedItems = newLeasedItems;
     }
 
-    // static method that returns all leased items
-    public static String allLeasedItems() {
-        return "WIP";
-    }
 
-    //TODO: update this sheet to include leased items
+     // array to store client's leased items
+     public Item[] leasedItems = new Item[0];
+     // array to store items leased by *all* clients
+     public static Item[] allLeasedItems = new Item[0];
+ 
+ 
+     // lease an item to the client
+     // deepcopies
+     public void lease(Item item) {
+         int currentSize = this.leasedItems.length;
+         Item[] newLeasedItems = new Item[currentSize+1];
+         for (int i=0; i<currentSize; i++) {
+             newLeasedItems[i] = this.leasedItems[i];
+         }
+         newLeasedItems[currentSize] = item;
+         this.leasedItems = newLeasedItems;
+     }
+ 
+     // static method that returns all leased items
+     public static String allLeasedItems() {
+         return "WIP";
+     }
     
 }

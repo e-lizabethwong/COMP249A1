@@ -1,9 +1,14 @@
 package src.LibraryPackage;
+import java.util.Scanner;
+
+import src.ClientPackage.Client;
 
 public class Library 
 {
-    private static Item[] allItems = new Item[100];
+    private Item[] allItems = new Item[100];
     private static int itemCount = 0;
+    // array to store Clients
+    private Client[] clients = new Client[0];
     
     public void addItem(Item item)
     {
@@ -50,6 +55,49 @@ public class Library
         }
     }
 
+    // add a client
+    public void add(Client client) {
+        Client[] newClientBook = new Client[this.clients.length + 1];
+        for (int i=0; i<this.clients.length+1; i++) {
+            newClientBook[i] = this.clients[i];
+        }
+        newClientBook[this.clients.length] = client;
+        this.clients = newClientBook;
+    }
+
+
+    public void deleteClient(String id) {
+        for (int i = 0; i < Client.clientCount; i++) {
+            if (clients[i].getClientID().equals(id)) {
+                clients[i] = null;
+                for (int j = i; j < Client.clientCount - 1; j++) {
+                    clients[j] = clients[j + 1];
+                }
+                Client.clientCount--;
+                System.out.println("Client deleted successfully!");
+                
+            }
+        }
+    
+    }
+
+    //edit client info based on given id number search 
+    public void editClient(String id, String newname, long phone, String email) {
+        for(int i = 0;i < this.clients.length;i++)
+        {
+            if(this.clients[i].getClientID().equals(id))
+            {
+                this.clients[i].setName(newname);
+                this.clients[i].setPhoneNum(phone);
+                this.clients[i].setEmail(email);
+
+                System.out.println("Client information updated successfully!");
+
+            }
+        }
+        
+       
+    }
 
     
 }

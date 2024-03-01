@@ -40,9 +40,9 @@ public class Driver {
                 System.out.println("7- edit a client");
                 System.out.println("8- delete a client");
                 System.out.println("9- show all items leased by a client");
-                System.out.println("9- show all leased items by all clients");
-                System.out.println("10- display the biggest book");
-                System.out.println("11- make a copy of the books array");
+                System.out.println("10- show all leased items by all clients");
+                System.out.println("11- display the biggest book");
+                System.out.println("12- make a copy of the books array");
 
                 int menu = in.nextInt();
 
@@ -77,37 +77,73 @@ public class Driver {
                             Item media1 = new Media(name, author, year, mediaType);
                             library.addItem(media1);
                         } else {
-                            System.out.println("Invalid item type!");
-                            }
+                        System.out.println("Invalid item type!");
+                        }
                         break;
                     case 2:
-                            System.out.print("Enter ID of item to delete: ");
-                            String id = in.nextLine();
-                            library.deleteItem(id);
-                            break;
-                        case 3:
-                            System.out.print("Enter ID of item to change: ");
-                            id = in.nextLine();
-                            System.out.print("Enter new name: ");
-                            String newName = in.nextLine();
-                            System.out.print("Enter new author: ");
-                            String newAuthor = in.nextLine();
-                            System.out.print("Enter new year: ");
-                            int newYear = in.nextInt();
-                            library.changeItemInfo(id, newName, newAuthor, newYear);
-                            break;
-                        case 4:
-                            System.out.print("Enter category to list (Book/Journal/Media): ");
-                            category = in.nextLine();
-                            library.listItemsByCategory(category);
-                            break;
-                        case 5:
-                            library.printAllItems();
-                            break;
-                        case 6:
-                           //
-                        default:
-                            System.out.println("Invalid choice!");
+                        System.out.print("Enter ID of item to delete: ");
+                        String id = in.nextLine();
+                        library.deleteItem(id);
+                        break;
+                    case 3:
+                        System.out.print("Enter ID of item to change: ");
+                        id = in.nextLine();
+                        System.out.print("Enter new name: ");
+                        String newName = in.nextLine();
+                        System.out.print("Enter new author: ");
+                        String newAuthor = in.nextLine();
+                        System.out.print("Enter new year: ");
+                        int newYear = in.nextInt();
+                        library.changeItemInfo(id, newName, newAuthor, newYear);
+                        break;
+                     case 4:
+                         System.out.print("Enter category to list (Book/Journal/Media): ");
+                        category = in.nextLine();
+                        library.listItemsByCategory(category);
+                         break;
+                    case 5:
+                        library.printAllItems();
+                        break;
+                    case 6:
+                        System.out.print("Enter client ID: ");
+                         id = in.nextLine();
+                        System.out.print("Enter client name: ");
+                        name = in.nextLine();
+                        System.out.print("Enter client phone number: ");
+                        long phoneNumber = in.nextLong();
+                        System.out.print("Enter client email address: ");
+                        String emailAddress = in.nextLine();
+
+                        Client client1 = new Client(name, phoneNumber, emailAddress);
+                        library.add(client1);                
+                        System.out.println("Client added successfully!");
+                        break;
+                    case 7:
+                        System.out.println("Enter client id to edit info: ");
+                        id = in.nextLine();
+                        System.out.print("Enter new name: ");
+                        newName = in.nextLine();
+                        System.out.print("Enter new phone number: ");
+                        long newPhoneNumber = in.nextLong();
+                        System.out.print("Enter new email address: ");
+                        String newEmailAddress = in.nextLine();
+                
+                        library.editClient(id, newName, newPhoneNumber, newEmailAddress);
+                    case 8:
+                        System.out.print("Enter client ID to delete: ");
+                        id = in.nextLine();
+                        library.deleteClient(id);
+                    case 9:
+                        
+                    case 10:
+
+                    case 11:
+
+                    case 12:
+
+                
+                    default:
+                        System.out.println("Invalid choice!");
                     }
                 
                    
