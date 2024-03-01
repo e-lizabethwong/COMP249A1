@@ -7,7 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ccb8fe59-3181-40dc-9cef-0a4543baa119" name="Changes" comment="deleted leasedItems">
+    <list default="true" id="ccb8fe59-3181-40dc-9cef-0a4543baa119" name="Changes" comment="wrote returnitem">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ClientPackage/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientPackage/Client.java" afterDir="false" />
     </list>
@@ -193,7 +193,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709319777625</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="wrote returnitem">
+      <option name="closed" value="true" />
+      <created>1709324139792</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1709324139792</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -220,6 +228,7 @@
     <MESSAGE value="ClientBook toString" />
     <MESSAGE value="clientID change and clientBook toString" />
     <MESSAGE value="deleted leasedItems" />
-    <option name="LAST_COMMIT_MESSAGE" value="deleted leasedItems" />
+    <MESSAGE value="wrote returnitem" />
+    <option name="LAST_COMMIT_MESSAGE" value="wrote returnitem" />
   </component>
 </project>

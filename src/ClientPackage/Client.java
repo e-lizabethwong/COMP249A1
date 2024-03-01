@@ -110,33 +110,58 @@ public class Client {
  
  
      // lease an item to the client
-     // deepcopies
-     public void lease(Item item) {
-         int currentSize = this.leasedItems.length;
-         Item[] newLeasedItems = new Item[currentSize+1];
-         for (int i=0; i<currentSize; i++) {
-             newLeasedItems[i] = this.leasedItems[i];
+     // deepcopies original array and appends new item to the end
+    // returns true or false based on success of adding item
+     public boolean lease(Item item) {
+         if (item == null) {
+             return false;
+         } else {
+             int currentSize = this.leasedItems.length;
+             Item[] newLeasedItems = new Item[currentSize + 1];
+             for (int i = 0; i < currentSize; i++) {
+                 newLeasedItems[i] = this.leasedItems[i];
+             }
+             newLeasedItems[currentSize] = item;
+             this.leasedItems = newLeasedItems;
+             return true;
          }
-         newLeasedItems[currentSize] = item;
-         this.leasedItems = newLeasedItems;
      }
 
-     // allows client to return an item
-    // deepcopy of original list minus returned item
-    // need to skip at i hmmm
-    public void returns(Item item) {
-        int currentSize = this.leasedItems.length;
-        Item[] newLeasedItems = new Item[currentSize=1];
-        for (int i=0; i< currentSize; i++) {
-            if (!this.leasedItems[i].equals(item)) {
-                newLeasedItems[i] = this.leasedItems[i];
-            } else {
-                // "skips" over the removed item without having a null entry in the new array
-                currentSize -= 1;
-                i -= 1;
+    // allows client to return an item
+    // deepcopy of original array minus returned item
+    // checks if item exists and if item exists in the client's leased items array
+    public boolean returns(Item item) {
+        // check if item exists
+        if (item == null) {
+            return false;
+        }
+
+        // check if item exists in client's leased items array
+        boolean itemExists = false;
+        for (int i=0; i<this.leasedItems.length; i++) {
+            if (this.leasedItems[i].equals(item)) {
+                itemExists = true;
+                break;
             }
         }
-        this.leasedItems = newLeasedItems;
+
+        if (itemExists) {
+            int currentSize = this.leasedItems.length;
+            Item[] newLeasedItems = new Item[currentSize=1];
+            for (int i=0; i< currentSize; i++) {
+                if (!this.leasedItems[i].equals(item)) {
+                    newLeasedItems[i] = this.leasedItems[i];
+                } else {
+                    // "skips" over the removed item without having a null entry in the new array
+                    currentSize -= 1;
+                    i -= 1;
+                }
+            }
+            this.leasedItems = newLeasedItems;
+            return true;
+        } else {
+            return false;
+        }
     }
  
      // static method that returns *all* leased items
