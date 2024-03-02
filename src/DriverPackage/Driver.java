@@ -154,7 +154,49 @@ public class Driver {
 
         }else if(next == 2)
         {
-            //
+            Item bookNew = new Book("harry potter", "jk rowling", 2000, 200);
+            Item mediaNew = new Media("media1", "radioTV", 2003, "audio");
+            Item journalNew = new Journal("diary", "mr bean", 1999, 3);
+
+            System.out.println(bookNew);
+            System.out.println(mediaNew);
+            System.out.println(journalNew);
+
+            Item bookNew1 = new Book("harry potter", "jk rowling", 2000, 200);
+            Item mediaNew1 = new Media("f451", "blue", 29, "interactive");
+            Item journalNew1 = new Journal("journal2", "diary", 1389, 3);
+
+            if (bookNew.equals(bookNew1))
+            {
+                System.out.println("The 2 books are the same");
+            }
+            else{
+                System.out.println("The 2 books are not the same");
+            }
+
+            if(mediaNew.equals(mediaNew1))
+            {
+                System.out.println("The medias books are the same");
+            }
+            else{
+                System.out.println("The 2 medias are not the same");
+            }
+
+            if (journalNew.equals(journalNew1))
+            {
+                System.out.println("The 2 journals are not the same");
+            }
+            else{
+                System.out.println("The 2 journals are not the same");
+            }
+
+            Book[] books = {(Book)bookNew, (Book)bookNew1};
+            Media[] medias = {(Media)mediaNew, (Media)mediaNew1};
+            Item[] items = {bookNew, mediaNew, journalNew};
+
+            copyBooks(items);
+
+
         }
     }
 
