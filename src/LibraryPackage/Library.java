@@ -114,5 +114,10 @@ public class Library
         }
         return biggestBook;
     }
-    
+
+    public void allLeasedItems() {
+        for (int i=0; i< clients.length; i++) {
+            this.clients[i].printLeasedItems();
+        }
+    }
 }

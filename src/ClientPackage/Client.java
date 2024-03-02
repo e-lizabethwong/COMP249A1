@@ -48,6 +48,9 @@ public class Client {
     public String getEmail() {
         return email;
     }
+    public Item[] getLeasedItems() {
+        return this.leasedItems;
+    }
 
     public void setEmail(String email) {
         this.email = email;
@@ -104,10 +107,6 @@ public class Client {
         Client otherClient = (Client) otherObject;
         return (this.name.equals(otherClient.name) && this.phoneNum == otherClient.phoneNum && this.email.equals(otherClient.email));
     }
-
-     // array to store items leased by *all* clients
-     public static Item[] allLeasedItems = new Item[0];
- 
  
     // lease an item to the client
     // deepcopies original array and appends new item to the end
@@ -163,11 +162,10 @@ public class Client {
             return false;
         }
     }
- 
-     // static method that returns *all* leased items
-     public static String allLeasedItems() {
 
-         return "WIP";
-     }
-
+    public void printLeasedItems() {
+        for (int i=0; i<this.leasedItems.length; i++) {
+            System.out.println(this.leasedItems[i].toString());
+        }
+    }
 }
