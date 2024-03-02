@@ -109,8 +109,8 @@ public class Client {
      public static Item[] allLeasedItems = new Item[0];
  
  
-     // lease an item to the client
-     // deepcopies original array and appends new item to the end
+    // lease an item to the client
+    // deepcopies original array and appends new item to the end
     // returns true or false based on success of adding item
      public boolean lease(Item item) {
          if (item == null) {
@@ -170,5 +170,4 @@ public class Client {
          return "WIP";
      }
 
-         
 }

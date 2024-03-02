@@ -83,7 +83,7 @@ public class Library
 
     //edit client info based on given id number search 
     public void editClient(String id, String newname, long phone, String email) {
-        for(int i = 0;i < this.clients.length;i++)
+        for (int i = 0;i < this.clients.length;i++)
         {
             if(this.clients[i].getClientID().equals(id))
             {
@@ -95,9 +95,24 @@ public class Library
 
             }
         }
-        
-       
     }
 
+    // iterates through all items to find the first book and then compares all books thereafter to find the biggest one
+    public Book getBiggestBook() {
+        Book biggestBook = null;
+        boolean firstBook = true;
+        for (int i=0; i<allItems.length; i++) {
+            if (allItems[i].getClass() == Book.class) {
+                if (firstBook) {
+                    biggestBook = (Book) allItems[i];
+                    firstBook = false;
+                }
+                if (((Book) allItems[i]).getNumPages() > biggestBook.getNumPages()) {
+                    biggestBook = (Book) allItems[i];
+                }
+            }
+        }
+        return biggestBook;
+    }
     
 }

@@ -2,10 +2,10 @@ package src.LibraryPackage;
 
 // super class for all library items
 public class Item {
-    private String id;
-    private String name;
-    private String author;
-    private int yearOfPub;
+    protected String id;
+    protected String name;
+    protected String author;
+    protected int yearOfPub;
 
     // default constructor
     public Item() {

@@ -21,7 +21,7 @@ public class Driver {
         
         Scanner in = new Scanner(System.in);
         System.out.println("Welcome to Elizabeth and Elsa's library!");
-        System.out.println("Enter 1 if you would like to go to the menu or 2 if you would like to run a pre-defined scenario");
+        System.out.print("Enter 1 if you would like to go to the menu or 2 if you would like to run a pre-defined scenario: ");
 
         int next = in.nextInt();
 
@@ -45,7 +45,7 @@ public class Driver {
                 System.out.println("12- make a copy of the books array");
 
                 int menu = in.nextInt();
-
+                in.nextLine();
                 Library library = new Library();
                 
                 switch (menu) {
@@ -138,7 +138,7 @@ public class Driver {
                     case 10:
 
                     case 11:
-
+                        //System.out.println(getBiggestBook())
                     case 12:
 
                 
@@ -156,22 +156,6 @@ public class Driver {
         {
             //
         }
-    }
-
-
-    //method that finds the book with the highest number of pages
-    public static Book getBiggestBook(Book[] arr)
-    {
-        Book highestNumPages = arr[0];
-        for (int i = 1; i < arr.length; i++)
-        {
-            if (arr[i].getNumPages() > highestNumPages.getNumPages())
-            {
-                highestNumPages = arr[i];
-            }
-        }
-
-        return highestNumPages;
     }
 
     //method that makes a deep copy of the array of an iteam such as book, journal, or media passed as parameter

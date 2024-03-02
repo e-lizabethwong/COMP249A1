@@ -7,9 +7,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ccb8fe59-3181-40dc-9cef-0a4543baa119" name="Changes" comment="wrote returnitem">
+    <list default="true" id="ccb8fe59-3181-40dc-9cef-0a4543baa119" name="Changes" comment="check if item is in clientleaseditems in remove">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ClientPackage/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientPackage/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DriverPackage/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DriverPackage/Driver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LibraryPackage/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryPackage/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LibraryPackage/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryPackage/Library.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +204,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709324139792</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="check if item is in clientleaseditems in remove">
+      <option name="closed" value="true" />
+      <created>1709329413627</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1709329413627</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -229,6 +240,7 @@
     <MESSAGE value="clientID change and clientBook toString" />
     <MESSAGE value="deleted leasedItems" />
     <MESSAGE value="wrote returnitem" />
-    <option name="LAST_COMMIT_MESSAGE" value="wrote returnitem" />
+    <MESSAGE value="check if item is in clientleaseditems in remove" />
+    <option name="LAST_COMMIT_MESSAGE" value="check if item is in clientleaseditems in remove" />
   </component>
 </project>
