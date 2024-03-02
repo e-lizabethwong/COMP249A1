@@ -98,7 +98,7 @@ public class Library
     }
 
     // iterates through all items to find the first book and then compares all books thereafter to find the biggest one
-    public Book getBiggestBook() {
+    public Book getBiggestBook(Book[] book) {
         Book biggestBook = null;
         boolean firstBook = true;
         for (int i=0; i<allItems.length; i++) {
